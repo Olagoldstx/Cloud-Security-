@@ -1,22 +1,39 @@
 ```mermaid
 flowchart LR
-  %% Shared Responsibility: Provider vs Customer (AWS, Azure, GCP)
-
-  subgraph AWS[Amazon Web Services]
-    AProv[Provider<br/>- Physical DCs &amp; Facilities<br/>- Network &amp; Hypervisor<br/>- Managed Service Platform]:::prov
-    ACust[Customer<br/>- Data &amp; Identity (IAM)<br/>- OS, Apps, Configs (IaaS)<br/>- Access Controls &amp; Keys<br/>- Compliance in Cloud]:::cust
-  end
-
-  subgraph AZ[Microsoft Azure]
-    ZProv[Provider<br/>- Physical DCs &amp; Facilities<br/>- Network &amp; Hypervisor<br/>- PaaS/SaaS Runtime]:::prov
-    ZCust[Customer<br/>- Data &amp; Identity (Entra ID)<br/>- Workloads, Configs (IaaS)<br/>- RBAC, Policies, Keys<br/>- Compliance in Cloud]:::cust
-  end
-
-  subgraph GCP[Google Cloud Platform]
-    GProv[Provider<br/>- Physical DCs &amp; Facilities<br/>- Network &amp; Hypervisor<br/>- Global Control Plane]:::prov
-    GCust[Customer<br/>- Data &amp; Identity (IAM)<br/>- Workloads, Configs (IaaS)<br/>- Org Policies, Keys<br/>- Compliance in Cloud]:::cust
-  end
-
-  classDef prov fill:#eef7ff,stroke:#1f6feb,stroke-width:1.5px,color:#0b3563
-  classDef cust fill:#f5fff0,stroke:#1a7f37,stroke-width:1.5px,color:#0b3b19
+    %% Shared Responsibility: Provider vs Customer (AWS, Azure, GCP)
+    subgraph AWS[Amazon Web Services]
+        AProv["Provider
+        - Physical DCs & Facilities
+        - Network & Hypervisor
+        - Managed Service Platform"]:::prov
+        ACust["Customer
+        - Data & Identity (IAM)
+        - OS, Apps, Configs (IaaS)
+        - Access Controls & Keys
+        - Compliance in Cloud"]:::cust
+    end
+    subgraph AZ[Microsoft Azure]
+        ZProv["Provider
+        - Physical DCs & Facilities
+        - Network & Hypervisor
+        - PaaS/SaaS Runtime"]:::prov
+        ZCust["Customer
+        - Data & Identity (Entra ID)
+        - Workloads, Configs (IaaS)
+        - RBAC, Policies, Keys
+        - Compliance in Cloud"]:::cust
+    end
+    subgraph GCP[Google Cloud Platform]
+        GProv["Provider
+        - Physical DCs & Facilities
+        - Network & Hypervisor
+        - Global Control Plane"]:::prov
+        GCust["Customer
+        - Data & Identity (IAM)
+        - Workloads, Configs (IaaS)
+        - Org Policies, Keys
+        - Compliance in Cloud"]:::cust
+    end
+    classDef prov fill:#eef7ff,stroke:#1f6feb,stroke-width:1.5px,color:#0b3563
+    classDef cust fill:#f5fff0,stroke:#1a7f37,stroke-width:1.5px,color:#0b3b19
 ```
